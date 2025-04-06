@@ -49,11 +49,12 @@ docker-compose up --build
 모든 서비스가 실행되며, 각각의 FastAPI 서버가 컨테이너에서 작동합니다.
 🌐 서비스 엔드포인트
 
-서비스명	포트	Swagger UI 주소
-로그인 서비스	8000	http://localhost:8000/docs
-DB 조회 서비스	8001	http://localhost:8001/docs
-상품 리스트 서비스	8002	http://localhost:8002/docs
-결제 서비스	8003	http://localhost:8003/docs
+| 서비스명	| 포트	| Swagger UI 주소 |
+|----------|----|---------------|
+| 로그인 서비스 |	8000	| http://localhost:8000/docs |
+| DB 조회 서비스 |	8001	| http://localhost:8001/docs |
+| 상품 리스트 서비스 |	8002	| http://localhost:8002/docs |
+| 결제 서비스 |	8003	| http://localhost:8003/docs |
 
 
 ## 🔍 테스트 예시
@@ -95,7 +96,7 @@ curl -X POST http://localhost:8003/pay \
 docker-compose down
 docker-compose up --build
 ```
-##💡 TODO (확장 아이디어)
+## 💡 TODO (확장 아이디어)
 - JWT 기반 인증 시스템
 - PostgreSQL 또는 MongoDB 연동
 - Kafka 또는 RabbitMQ로 서비스 간 메시징
