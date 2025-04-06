@@ -91,12 +91,12 @@ curl -X POST http://localhost:8003/pay \
 - API Gateway
 - 서비스 간 메시지 브로커 (Kafka, RabbitMQ 등)
 
-### 📝 Swager UI 사용방법 
+## 📝 Swager UI 사용방법 
 ![{F0272E62-C3B8-4285-8995-9E5BD313453A}](https://github.com/user-attachments/assets/67d1495a-7269-48f9-85a9-d8e21b9c99a8)
 
 API엔드포인트를 SwagerUI에서 확인할 수 있습니다.
 
-##🔄 개발 중 Docker 반영 방법
+## 🔄 개발 중 Docker 반영 방법
 
 ```bash
 docker-compose down
