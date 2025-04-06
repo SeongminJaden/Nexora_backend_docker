@@ -1,9 +1,34 @@
 version: '3.8'
 
 services:
-  fastapi:
-    build: .
-    container_name: fastapi-container
+  login:
+    build:
+      context: ./login-service
+    container_name: login-service
     ports:
       - "8000:8000"
-    restart: always
+
+  db:
+    build:
+      context: ./db-service
+    container_name: db-service
+    ports:
+      - "8001:8000"
+
+  product:
+    build:
+      context: ./product-service
+    container_name: product-service
+    ports:
+      - "8002:8000"
+
+  payment:
+    build:
+      context: ./payment-service
+    container_name: payment-service
+    ports:
+      - "8003:8000"
+    depends_on:
+      - db
+      - product
+      - login

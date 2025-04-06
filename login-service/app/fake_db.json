@@ -1,0 +1,20 @@
+{
+    "users": [
+      {
+        "username": "seongmin",
+        "password": "1234"
+      },
+      {
+        "username": "bomin",
+        "password": "1234"
+      },
+      {
+        "username": "giwon",
+        "password": "1234"
+      },      {
+        "username": "jeongmin",
+        "password": "1234"
+      }
+    ]
+  }
+  

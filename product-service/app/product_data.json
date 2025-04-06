@@ -1,0 +1,23 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Laptop",
+        "price": 1500,
+        "description": "High-performance laptop"
+      },
+      {
+        "id": 2,
+        "name": "Smartphone",
+        "price": 800,
+        "description": "Latest model smartphone"
+      },
+      {
+        "id": 3,
+        "name": "Tablet",
+        "price": 600,
+        "description": "Lightweight tablet with stylus"
+      }
+    ]
+  }
+  

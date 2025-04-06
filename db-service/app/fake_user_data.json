@@ -1,0 +1,23 @@
+{
+    "seongmin": {
+        "wishlist": ["Laptop", "Smartphone"],
+        "cart": ["Mouse", "Keyboard"],
+        "purchases": ["Tablet"]
+    },
+    "bomin": {
+        "wishlist": ["Book", "Headphones"],
+        "cart": ["Pen"],
+        "purchases": []
+    },
+    "giwon": {
+        "wishlist": ["Laptop", "Smartphone"],
+        "cart": ["Mouse", "Keyboard"],
+        "purchases": ["Tablet"]
+    },
+    "jeongmin": {
+        "wishlist": ["Book", "Headphones"],
+        "cart": ["Pen"],
+        "purchases": []
+    }
+}
+  

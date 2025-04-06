@@ -1,0 +1,13 @@
+{
+    "admin": {
+      "wishlist": ["Laptop", "Smartphone"],
+      "cart": ["Mouse", "Keyboard"],
+      "purchases": ["Tablet"]
+    },
+    "guest": {
+      "wishlist": ["Book", "Headphones"],
+      "cart": ["Pen"],
+      "purchases": []
+    }
+  }
+  
