@@ -45,8 +45,8 @@ project-root/
 
 ```bash
 docker-compose up --build
+```
 모든 서비스가 실행되며, 각각의 FastAPI 서버가 컨테이너에서 작동합니다.
-
 🌐 서비스 엔드포인트
 
 서비스명	포트	Swagger UI 주소
@@ -54,55 +54,50 @@ docker-compose up --build
 DB 조회 서비스	8001	http://localhost:8001/docs
 상품 리스트 서비스	8002	http://localhost:8002/docs
 결제 서비스	8003	http://localhost:8003/docs
-🔍 테스트 예시
-✅ 로그인 요청
-
-bash
 
 
+## 🔍 테스트 예시
+### ✅ 로그인 요청
+
+```bash
 curl -X POST http://localhost:8000/login \
 -H "Content-Type: application/json" \
 -d '{"username": "seongmin", "password": "1234"}'
-✅ DB 조회
+```
+### ✅ DB 조회
 
-bash
-
-
+```bash
 curl http://localhost:8001/user/seongmin
-✅ 상품 리스트 조회
-
-bash
-
-
+```
+### ✅ 상품 리스트 조회
+```bash
 curl http://localhost:8002/products
-✅ 결제 요청
+```
+### ✅ 결제 요청
 
-bash
-
-
+```bash
 curl -X POST http://localhost:8003/pay \
 -H "Content-Type: application/json" \
 -d '{"username": "seongmin"}'
-📝 참고사항
+```
+### 📝 참고사항
 데이터베이스는 현재 각 서비스 내부에 존재하는 JSON 파일을 임시 DB로 사용합니다.
 
 실제 서비스 연결 시 다음 항목들이 추가될 수 있습니다:
 
-JWT 인증 시스템
-실 데이터베이스(PostgreSQL, MongoDB 등)
-API Gateway
-서비스 간 메시지 브로커 (Kafka, RabbitMQ 등)
-🔄 개발 중 Docker 반영 방법
+- JWT 인증 시스템
+- 실 데이터베이스(PostgreSQL, MongoDB 등)
+- API Gateway
+- 서비스 간 메시지 브로커 (Kafka, RabbitMQ 등)
+##🔄 개발 중 Docker 반영 방법
 
-bash
-
-
+```bash
 docker-compose down
 docker-compose up --build
-💡 TODO (확장 아이디어)
-
-JWT 기반 인증 시스템
-PostgreSQL 또는 MongoDB 연동
-Kafka 또는 RabbitMQ로 서비스 간 메시징
-API Gateway 통합
-서비스 헬스 체크 & 모니터링
+```
+##💡 TODO (확장 아이디어)
+- JWT 기반 인증 시스템
+- PostgreSQL 또는 MongoDB 연동
+- Kafka 또는 RabbitMQ로 서비스 간 메시징
+- API Gateway 통합
+- 서비스 헬스 체크 & 모니터링
