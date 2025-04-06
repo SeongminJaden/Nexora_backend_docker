@@ -12,7 +12,7 @@
 ---
 
 ## 📁 프로젝트 구조
-
+```
 project-root/
 ├── docker-compose.yml
 ├── login-service/
@@ -34,7 +34,7 @@ project-root/
 ├── app/
 │   └── main.py
 └── Dockerfile
-
+```
 
 
 ---
