@@ -3,13 +3,13 @@
     "id": 1,
     "name": "손보민",
     "profile_image": "https://example.com/profile1.png",
-    "address": "분당구 서현동"
+    "address": "광진구 중곡동"
   },
   {
     "id": 2,
     "name": "이성민",
     "profile_image": "https://example.com/profile2.png",
-    "address": "광진구 중곡동"
+    "address": "분당구 서현동"
   },
   {
     "id": 3,

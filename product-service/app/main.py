@@ -80,7 +80,7 @@ async def get_creator_products(
 
         if creator_id not in all_products:
             raise HTTPException(status_code=404, detail="해당 작가의 상품이 없습니다.")
-
+        print(all_products)
         return all_products[creator_id]
     except JWTError as e:
         print(f"❌ 토큰 검증 실패: {str(e)}")

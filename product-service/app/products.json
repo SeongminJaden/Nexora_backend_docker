@@ -1,20 +1,23 @@
 {
     "1": [
       {
+        "id": "0001",
         "image_url": "https://example.com/item1.jpg",
-        "name": "작가1 상품1",
+        "name": "상품1",
         "price": 10000
       },
       {
+        "id": "0002",
         "image_url": "https://example.com/item2.jpg",
-        "name": "작가1 상품2",
+        "name": "상품2",
         "price": 12000
       }
     ],
     "2": [
       {
+        "id": "0003",
         "image_url": "https://example.com/item3.jpg",
-        "name": "작가2 상품1",
+        "name": "상품1",
         "price": 8000
       }
     ]
