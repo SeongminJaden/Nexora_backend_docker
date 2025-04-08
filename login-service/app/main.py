@@ -1,34 +1,25 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import json
-import os
+from kakao_auth import verify_kakao_token
+from jwt_utils import create_jwt
 
-app = FastAPI(
-    title="Login Service",
-    description="Simple login API using JSON as fake database",
-    version="1.0.0"
-)
+app = FastAPI()
 
-class LoginRequest(BaseModel):
-    username: str
-    password: str
+class KakaoTokenRequest(BaseModel):
+    access_token: str
 
-# JSON 파일에서 사용자 정보 로드
-def load_users():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    db_path = os.path.join(base_dir, "fake_db.json")
-    with open(db_path, "r") as f:
-        data = json.load(f)
-    return data["users"]
+@app.post("/login/kakao")
+async def login_kakao(data: KakaoTokenRequest):
+    kakao_user_info = await verify_kakao_token(data.access_token)
+    
+    if kakao_user_info is None:
+        raise HTTPException(status_code=401, detail="Invalid Kakao token")
 
-@app.post("/login")
-def login(login_req: LoginRequest):
-    try:
-        users = load_users()
-        for user in users:
-            if user["username"] == login_req.username and user["password"] == login_req.password:
-                return {"message": "Login success!"}
-        raise HTTPException(status_code=401, detail="Invalid username or password")
-    except Exception as e:
-        print("로그인 처리 중 오류 발생:", e)
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+    # 예: email, nickname 정보 추출
+    email = kakao_user_info.get("kakao_account", {}).get("email", "")
+    nickname = kakao_user_info.get("kakao_account", {}).get("profile", {}).get("nickname", "")
+
+    # JWT 생성
+    jwt_token = create_jwt({"email": email, "nickname": nickname})
+    
+    return {"jwt": jwt_token}
