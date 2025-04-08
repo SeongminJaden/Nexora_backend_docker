@@ -21,5 +21,5 @@ async def login_kakao(data: KakaoTokenRequest):
 
     # JWT 생성
     jwt_token = create_jwt({"email": email, "nickname": nickname})
-    
+    print(jwt_token)
     return {"jwt": jwt_token}
