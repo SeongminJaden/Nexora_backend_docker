@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "손보민",
+    "profile_image": "https://example.com/profile1.png",
+    "address": "분당구 서현동"
+  },
+  {
+    "id": 2,
+    "name": "이성민",
+    "profile_image": "https://example.com/profile2.png",
+    "address": "광진구 중곡동"
+  },
+  {
+    "id": 3,
+    "name": "이정민",
+    "profile_image": "https://example.com/profile1.png",
+    "address": "세종시 고운동"
+  },
+  {
+    "id": 4,
+    "name": "김지원",
+    "profile_image": "https://example.com/profile2.png",
+    "address": "천안시 두정동"
+  }
+]
